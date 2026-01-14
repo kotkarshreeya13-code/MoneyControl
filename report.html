@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights page</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link href="https://fonts.googleapis.com/css?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+   <nav id="navbar">
+    <div class="nav-logo">
+        <span class="material-symbols-outlined wallet-icon">account_balance_wallet</span>
+        <h1 class="brand-name">Money<span>Control</span></h1>
+    </div>
+
+    <ul class="nav-links"> <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="calculate.html" class="nav-link">Records</a></li>
+        <li><a href="report.html" class="nav-link">Insights</a></li>
+    </ul>
+</nav>
+<main class="container">
+        <h2>Financial Insights</h2>
+        
+        <div class="summary-grid">
+            
+    <div class="card">
+        <h4>Total Income</h4>
+        <p id="totalIncome" class="amt-income">₹0</p>
+    </div>
+    <div class="card">
+        <h4>Total Expense</h4>
+        <p id="totalExpense" class="amt-expense">₹0</p>
+    </div>
+    <div class="card">
+        <h4>Total Savings</h4>
+        <p id="totalSavings">₹0</p>
+    </div>
+    <div class="card">
+        <h4>Savings Rate</h4>
+        <p id="savingsRate">0%</p>
+    </div>
+        </div>
+        <div class="report-period">
+    <span id="currentDateDisplay">January 2026</span>
+</div>
+
+        <h3>Expense Analytics</h3>
+        <div class="analytics-container">
+            <div class="chart-box">
+                <canvas id="expenseChart"></canvas>
+            </div>
+            <div class="category-legend">
+                <ul id="categoryList"></ul>
+            </div>
+        </div>
+
+        <h3>Smart Savings Suggestions</h3>
+        <div id="suggestionBox" class="suggestion-container"></div>
+    </main>
+<footer>
+    <p>© 2025 MoneyControl Budgeting Website •Privacy Policy •Support </p>
+</footer>
+<script src="script.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Records page</title>
+    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+<link href="https://fonts.googleapis.com/css?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+  <nav id="navbar">
+    <div class="nav-logo">
+        <span class="material-symbols-outlined wallet-icon">account_balance_wallet</span>
+        <h1 class="brand-name">Money<span>Control</span></h1>
+    </div>
+
+    <ul class="nav-links"> <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="about.html" class="nav-link">About</a></li>
+        <li><a href="calculate.html" class="nav-link">Records</a></li>
+        <li><a href="report.html" class="nav-link">Insights</a></li>
+    </ul>
+</nav>
+    <main class="container">
+        <h2>Add Records</h2>
+        <div class="toggle-container">
+            <button id="incomeBtn" class="active" onclick="setMode('income')">Income</button>
+            <button id="expenseBtn" onclick="setMode('expense')">Expense</button>
+        </div>
+
+        <form id="entryForm">
+            <input type="number" id="amount" placeholder="Amount (₹)" required>
+            <select id="category" required></select>
+            <input type="date" id="date" required>
+            <input type="text" id="desc" placeholder="Description (Optional)">
+            <button type="submit" class="save-btn">Save Record</button>
+        </form>
+<div class="action-bar" style="margin: 40px 0; text-align: center;">
+    <button onclick="window.location.href='report.html'" class="view-report-btn">
+        View Detailed Insights →
+    </button>
+</div>
+        <div class="table-header">
+            <h3>Recent Entries</h3>
+            <button onclick="clearAllData()" class="clear-btn">Clear All</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Type</th>
+                    <th>Category</th>
+                    <th>Description</th>
+                    <th>Amount (₹)</th>
+                </tr>
+            </thead>
+            <tbody id="entries"></tbody>
+        </table>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
+
+<footer>
+    <p>© 2025 MoneyControl Budgeting Website •Privacy Policy •Support </p>
+</footer>
+<script src="script.js"></script>
+
+</body>
+</html>
